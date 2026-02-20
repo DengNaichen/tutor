@@ -38,7 +38,6 @@ Temporary Items
 *.lot
 *.nav
 *.out
-*.pdf
 *.ps
 *.snm
 *.toc
@@ -49,9 +48,6 @@ Temporary Items
 *.pdfsync
 *.fls
 *.fdb_latexmk
-
-# Explicitly unignore PDFs if you want to track them:
-# !*.pdf
 
 # Python/Environment (if you use any python scripts for generating plots, etc.)
 __pycache__/
