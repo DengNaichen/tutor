@@ -1,0 +1,32 @@
+name: Sync PDFs to Google Drive
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'high_school_physics/**/*.pdf'
+  workflow_dispatch:
+
+jobs:
+  upload-to-gdrive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Find and Upload PDF Files
+        # Using a popular open-source action to upload files to Google Drive
+        uses: adityak74/google-drive-upload-git-action@main
+        with:
+          # The credentials must be stored in your GitHub Secrets
+          credentials: ${{ secrets.GDRIVE_CREDENTIALS }}
+          
+          # The folder ID where you want to upload in your Google Drive
+          folderId: ${{ secrets.GDRIVE_FOLDER_ID }}
+          
+          # Upload all PDF files from the physics directory
+          filename: high_school_physics/**/*.pdf
+          
+          # Overwrite existing files with the same name (so your Drive stays updated)
+          overwrite: "true"
