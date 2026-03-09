@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{physics}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{AP Physics 1 Lesson Notes}}\\
+\vspace{0.2cm}
+{\large \textbf{Unit 6: Simple Harmonic Motion (SHM) \& Energy}}
+\end{center}
+\vspace{0.4cm}
+
+\section{Core Concept: What is SHM?}
+
+\textbf{Simple Harmonic Motion (SHM)} occurs when an object oscillates back and forth about an equilibrium position under the influence of a restoring force.
+
+\begin{tcolorbox}[colback=blue!5,colframe=blue!75!black,title=The Golden Rule of SHM]
+A system undergoes Simple Harmonic Motion \textbf{IF AND ONLY IF} the net restoring force is directly proportional to the displacement from equilibrium, and always directed towards it:
+\[ F_{net} = -kx \]
+According to Newton's Second Law ($F_{net}=ma$), the acceleration is also proportional to the displacement and opposite in direction: $a \propto -x$.
+\end{tcolorbox}
+
+\textbf{Key Positions in SHM:}
+\begin{itemize}
+    \item \textbf{Equilibrium Position ($x = 0$):} Unstretched spring/lowest point. Net force is zero ($F_{net}=0$), acceleration is zero ($a=0$). However, the object's speed is reaches its \textbf{maximum} ($v=v_{\max}$), meaning Kinetic Energy is maximized.
+    \item \textbf{Maximum Displacement/Amplitude ($x = \pm A$):} The turning points. Speed is zero ($v=0$), meaning Kinetic Energy is zero. However, the restoring force is at its \textbf{maximum}, so acceleration is also at its \textbf{maximum} ($a=a_{\max}$), and Potential Energy is maximized.
+\end{itemize}
+
+\section{Two Classic SHM Systems}
+
+\subsection{Mass-Spring System}
+For a block of mass $m$ attached to an ideal spring with spring constant $k$:
+\[ T_s = 2\pi\sqrt{\frac{m}{k}} \]
+\textit{Note:} The period is completely independent of the gravitational field $g$. A mass-spring system behaves exactly the same horizontally on a table, vertically on Earth, or even floating in deep space.
+
+\subsection{Simple Pendulum}
+For a pendulum with a bob of mass $m$ attached to a string of length $L$:
+\[ T_p = 2\pi\sqrt{\frac{L}{g}} \]
+\textit{Requirement:} This formula is only an approximation. It requires the \textbf{small angle approximation} (typically $\theta < 15^\circ$). Only for small angles does $\sin\theta \approx \theta$, making the restoring force proportional to displacement.
+
+\begin{tcolorbox}[colback=red!5,colframe=red!75!black,title=Warning: Common Trap (AP Favorite)]
+Neither the period of a spring oscillator nor a pendulum depends on the \textbf{Amplitude ($A$)}! 
+Additionally, the pendulum's period does NOT depend on the \textbf{mass ($m$)} of the bob.
+\end{tcolorbox}
+
+\section{Energy Conservation in SHM}
+
+In an ideal (frictionless) SHM system, Total Mechanical Energy is conserved. The energy smoothly transforms between Kinetic ($K$) and Potential ($U$).
+
+\[
+E_{\text{total}} = K + U = \frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \text{Constant}
+\]
+
+\begin{itemize}
+    \item At $x = 0$: $U = 0$, so $E_{\text{total}} = K_{\max} = \frac{1}{2}mv_{\max}^2$
+    \item At $x = \pm A$: $K = 0$, so $E_{\text{total}} = U_{\max} = \frac{1}{2}kA^2$ 
+\end{itemize}
+Combining these gives a very useful relationship: $\dfrac{1}{2}mv_{\max}^2 = \dfrac{1}{2}kA^2$.
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+\section{Guided Practice}
+
+\subsection*{Example 1: Energy Transformation}
+A block of mass $m$ is attached to an ideal spring of spring constant $k$ on a frictionless horizontal surface. The block is pulled a distance $A$ from its equilibrium position and released from rest. At what distance from the equilibrium position is the block's kinetic energy equal to its spring potential energy?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\Alph*.}]
+\item $\dfrac{A}{4}$
+\item $\dfrac{A}{2}$
+\item $\dfrac{A}{\sqrt{2}}$
+\item $A$
+\end{enumerate}
+\end{multicols}
+
+\textbf{Thinking Process:} Let $x$ be the position. We want $K = U_s$. Since $E = K + U_s$, if $K = U_s$, then $U_s = \frac{1}{2}E_{total}$.
+\[ \frac{1}{2}kx^2 = \frac{1}{2} \left(\frac{1}{2}kA^2\right) \quad \Rightarrow \quad x^2 = \frac{A^2}{2} \quad \Rightarrow \quad x = \frac{A}{\sqrt{2}} \]
+
+\vspace{0.3cm}
+
+\subsection*{Example 2: Parameter Changes}
+\textbf{Part A:} A block attached to a spring oscillates with amplitude $A$ on a frictionless horizontal surface. Its maximum speed is $v$. The block is then replaced with a new block of mass $4m$, and the amplitude is increased to $2A$. The spring constant remains unchanged. What is the new maximum speed?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\Alph*.}]
+\item $\dfrac{v}{2}$
+\item $v$
+\item $2v$
+\item $4v$
+\end{enumerate}
+\end{multicols}
+
+\textbf{Part B:} A simple pendulum oscillating with a small amplitude has a period $T$ and a maximum kinetic energy $K_{\max}$. If the amplitude of the pendulum's swing is doubled while remaining small enough for the motion to be considered simple harmonic, what are the new period and new maximum kinetic energy?
+
+\begin{center}
+\begin{tabular}{>{\bfseries}c c c}
+\toprule
+Choice & New Period & New Maximum Kinetic Energy \\
+\midrule
+A & $T$ & $2K_{\max}$ \\
+B & $T$ & $4K_{\max}$ \\
+C & $2T$ & $2K_{\max}$ \\
+D & $2T$ & $4K_{\max}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+
+\subsection*{Example 3: Dissipative Forces (Friction)}
+A block of mass $m$ is attached to a spring of spring constant $k$ on a horizontal surface. The surface is frictionless except for a rough strip of length $L$ centered at the equilibrium position.
+
+The block is pulled to the right a distance $A$ from equilibrium, where $A>L/2$, and released from rest. It moves left, passes through the rough strip, and momentarily comes to rest on the other side when the spring is compressed by $\dfrac{A}{2}$.
+
+What is the magnitude of the friction force exerted by the rough strip?
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\Alph*.}]
+\item $\dfrac{3kA^2}{8L}$
+\item $\dfrac{kA^2}{4L}$
+\item $\dfrac{kA^2}{2L}$
+\item $\dfrac{3kA^2}{4L}$
+\end{enumerate}
+\end{multicols}
+
+\textbf{Thinking Process:} Use the Work-Energy Theorem. $E_{initial} - W_{friction} = E_{final}$. 
+\[ \frac{1}{2}kA^2 - f \cdot L = \frac{1}{2}k\left(\frac{A}{2}\right)^2 \quad \Rightarrow \quad fL = \frac{1}{2}kA^2 - \frac{1}{8}kA^2 = \frac{3}{8}kA^2 \]
+
+\vspace{0.3cm}
+
+\subsection*{Example 4: Free-Response Practice (Conceptual Explanations)}
+A simple pendulum consists of a bob of mass $m$ attached to a light string of length $L$. The pendulum is displaced a small angle and released from rest, so that it undergoes simple harmonic motion.
+
+\begin{enumerate}[label=\textbf{(\alph*)}]
+\item Explain, in terms of the net force acting on the bob, why the pendulum's motion is considered simple harmonic only for \textit{small} angles.
+
+\item Provide a claim about whether the acceleration of the bob at its maximum displacement depends on the mass $m$ of the bob. Justify your claim using Newton's laws.
+
+\item The zero of gravitational potential energy is defined at the lowest point of the pendulum's path. On separate energy bar charts, indicate the relative amounts of kinetic energy $K$ and gravitational potential energy $U_g$ for each of the following positions:
+\begin{enumerate}[label=\textbf{\roman*.}]
+\item at the highest point of the motion
+\item as the bob passes through the lowest point
+\end{enumerate}
+
+\item A student claims that if the bob's mass is doubled while the pendulum is released from the same initial height, then the speed at the bottom of the swing will double. State whether the student is correct, and justify your answer using energy principles.
+\end{enumerate}
+
+\end{document}
