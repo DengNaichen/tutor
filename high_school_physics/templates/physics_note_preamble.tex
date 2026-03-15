@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\usetikzlibrary{arrows.meta, calc, patterns, positioning}
+
+\geometry{a4paper, margin=1in}
+
+\newcommand{\notesetup}[1]{
+    \title{#1}
+    \author{}
+    \date{}
+}
+
+\newtcolorbox{keyidea}[1]{
+    colback=blue!5,
+    colframe=blue!45!black,
+    title=#1
+}
+
+\newtcolorbox{pitfall}[1]{
+    colback=red!4,
+    colframe=red!55!black,
+    title=#1
+}
